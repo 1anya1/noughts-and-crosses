@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator with SASS</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class='header'>
+    <h1>
+        Building A Calculator Using HTML, CSS, JQuery, and JavaScript
+    </h1>
+    </div>
+    <div class='container'>
+        <div class='calculator'>
+        <div class='total'>
+         <p id='total'></p>
+        </div>
+        <div class='rows'>
+            <button class="key--operator" id='clear' data-action="clear">CLEAR</button>
+            <!-- <button class='button1'>M+</button> -->
+            <button class="key--operator" data-action="divide" value= / >/</button>
+            <button class="key--operator" data-action="multiply" value= * >X</button>
+            <button class='button2' value=7 >7</button>
+            <button class='button2' value=8>8</button>
+            <button class='button2' value=9>9</button>
+            <button class="key--operator" data-action="subtract" value= - >-</button>
+            <button class='button2'value=4>4</button>
+            <button class='button2' value=5>5</button>
+            <button class='button2' value=6>6</button>
+            <button class="key--operator" data-action="add" value= + >+</button>
+            <button class='button2' value=1>1</button>
+            <button class='button2'value=2>2</button>
+            <button class='button2' value=3>3</button>
+            <button class='button3' id='calculate' data-action="calculate" >=</button>
+            <button class='button2' id='button4'value =0 >0</button>
+            <button class='button2' value= . data-action="decimal">.</button>
+        </div>
+    </div>
+
+    </div>
+    <div>
+        <h3>This project was built using HTML, Sass (Semantically Awesome Style Sheets), JQuery, and JavaScript. </h3>
+    </div>
+    <div class='stack'>
+        <div class='css'>
+             <h4>CSS</h4>
+                <h6>Site is mobile responsive via use of 
+                    @media queries. For animation @keyframes were 
+                    used. Grid layout implemented and Semantically Awesome Style Sheets used.
+                </h6>
+        </div>
+        <div class='img1'><img src='https://i.imgur.com/qPV7uZg.png'></div>
+        <div class='img2' ><img id='img2' src='https://i.imgur.com/tE7eV7Z.png'></div>
+        <div class='html'>
+                <h4>HTML</h4>
+                <h6 class='h6'>Site is mobile responsive via use of 
+                    @media queries. For animation @keyframes were 
+                    used. Grid layout implemented and Semantically Awesome Style Sheets used.
+                </h6>          
+        </div>
+        <div class='JS'>
+                <h4>JavaScript</h4>
+                <h6>Site is mobile responsive via use of 
+                    @media queries. For animation @keyframes were 
+                    used. Grid layout implemented and Semantically Awesome Style Sheets used.
+                </h6>  
+            
+        </div>
+        <div class='img3'><img src='https://i.imgur.com/onDYyoC.png'></div>
+    </div>
+    <footer>
+       <h6>Here will go my links to my other projects linkedIn and github</h6>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
+
