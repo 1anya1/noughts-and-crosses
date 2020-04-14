@@ -2,11 +2,13 @@
 
 var player1 = {
     piece: 'X',
-    name: ''
+    name: '',
+    wins: 0
 }
 var player2= {
     piece: 'O',
-    name: ''
+    name: '',
+    wins:0
 }
 function my() {
     var name = document.getElementById('name').value;
@@ -15,8 +17,17 @@ function my() {
     } else{
         player1.name==='' ? player1.name=name : player2.name=name;
     }
-    document.getElementById('playerName').innerHTML = name;
+    if(player2.name==='') {
+        document.getElementById('player1').innerHTML = name;
+    } else{
+        document.getElementById('player2').innerHTML = name;
+    }
 }
+document.getElementById('piece1').innerHTML = player1.piece;
+
+document.getElementById('piece2').innerHTML = player2.piece;
+
+
 var currentPlayer = player1.piece;
 
 function place(box) {

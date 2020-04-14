@@ -1,6 +1,10 @@
 body{
     background-color: blue;
 }
+#intro{
+    padding: 40px;
+
+}
 .row div{
     padding: 10px;
     border: 1px solid black;
