@@ -1,22 +1,23 @@
 body{
     background-color: pink;
+    margin: 100px 100px auto; 
 }
 #intro{
     padding: 40px;
-
+}
+.row{    
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    justify-items: center;
+    align-items: center; 
+    justify-content: center;
 }
 .row div{
-    padding: 10px;
+    display:grid;
     border: 1px solid black;
-    height: 30px;
-    width: 30px;
-    float: left;
-
-}
-.row{
-    clear: both;
-}
-.gameBoard{
-    margin: 0 100px auto;
-  
+    height: 60px;
+    width: 60px;
+    margin: 0 50px;
+    align-items: center; 
+    justify-items: center;
 }

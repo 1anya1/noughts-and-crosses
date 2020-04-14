@@ -1,5 +1,5 @@
 
-
+var won = false;
 var player1 = {
     piece: 'X',
     name: '',
@@ -10,6 +10,7 @@ var player2= {
     name: '',
     wins:0
 }
+
 function my() {
     var name = document.getElementById('name').value;
     if(player1.name !== '' && player2.name!==''){
@@ -31,12 +32,38 @@ document.getElementById('piece2').innerHTML = player2.piece;
 var currentPlayer = player1.piece;
 
 function place(box) {
-    if(box.innerText != '') return;
+    if(box.innerText != '' || won) return;
     box.innerText = currentPlayer;
     if(currentPlayer === player2.piece){
         currentPlayer = player1.piece
+        
     }
     else{
         currentPlayer = player2.piece
+    }
+ checkBoard();
+}
+function checkBoard(){
+    for(var i=0; i<=2; i++){
+        checkWinner(document.getElementById(i + '_0').innerText,
+            document.getElementById(i+'_1').innerText,
+            document.getElementById(i+'_2').innerText);
+        checkWinner(document.getElementById('0_'+i).innerText,
+            document.getElementById('1_'+i).innerText,
+            document.getElementById('2_'+i).innerText);
+        
+    }
+    checkWinner(document.getElementById('0_0').innerText,
+        document.getElementById('1_1').innerText,
+        document.getElementById('2_2').innerText);
+    checkWinner(document.getElementById('0_2').innerText,
+        document.getElementById('1_1').innerText,
+        document.getElementById('2_0').innerText);
+}
+function checkWinner(first, second, third){
+    if(first !='' && first == second && first ==third){
+        alert(`winner ${first}`);
+        won = true;   
+        first.wins++
     }
 }
