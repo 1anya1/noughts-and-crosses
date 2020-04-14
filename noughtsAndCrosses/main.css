@@ -10,7 +10,6 @@ body{
     border: 1px solid black;
     height: 30px;
     width: 30px;
-    margin: 0 auto;
     float: left;
 
 }
@@ -18,5 +17,6 @@ body{
     clear: both;
 }
 .gameBoard{
-    margin: 0 500px auto;
+    margin: 0 100px auto;
+  
 }
