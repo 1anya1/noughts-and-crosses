@@ -14,13 +14,6 @@ var player = {
         wins:0
     }  
 }
-// Object.values(player).map(el=>{
-//     Object.values(el).map(i =>{
-//        if( i==='X') {
-//            console.log(el.wins)
-//        }
-//     })
-// })
 
 function my() {
     var name = document.getElementById('name').value;
@@ -71,8 +64,25 @@ function checkBoard(){
         document.getElementById('1_1').innerText,
         document.getElementById('2_0').innerText);
 }
+function restartBoard(){
+        document.getElementById('0_0').innerHTML='',
+        document.getElementById('0_1').innerHTML='',
+        document.getElementById('0_2').innerHTML='',
+
+        document.getElementById('1_0').innerHTML='',
+        document.getElementById('1_1').innerHTML='',
+        document.getElementById('1_2').innerHTML='',
+
+        document.getElementById('2_0').innerHTML='',
+        document.getElementById('2_1').innerHTML='',
+        document.getElementById('2_2').innerHTML='';
+    won= false;
+    document.getElementById('winner').innerHTML=''
+        
+    
+}
 function checkWinner(first, second, third){
-    if(first !='' && first == second && first ==third){
+    if(first !='' && first == second && first == third){
         let winner = first
 
         let winnerName = Object.values(player).map(el=>{
@@ -82,12 +92,28 @@ function checkWinner(first, second, third){
                 el.wins +=1
                 console.log(el.wins)
                    
-               } else{
-                   return false;
-               }
+               } 
             })
         })
         won = true;   
+       
         
+    }  else {
+        if (won =false && document.getElementById('0_0').innerHTML!=='' &&
+            document.getElementById('0_1').innerHTML!=='' &&
+            document.getElementById('0_2').innerHTML!==''&&
+
+            document.getElementById('1_0').innerHTML!=='' &&
+            document.getElementById('1_1').innerHTML!=='' &&
+            document.getElementById('1_2').innerHTML!=='' &&
+
+            document.getElementById('2_0').innerHTML!=='' &&
+            document.getElementById('2_1').innerHTML!=='' &&
+            document.getElementById('2_2').innerHTML!=='')
+        
+        { document.getElementById('winner').innerHTML=`It's a tie`    
+        }
     }
+    
 }
+    
