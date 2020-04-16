@@ -1,45 +1,56 @@
 
 var won = false;
-var player1 = {
-    piece: 'X',
-    name: '',
-    wins: 0
+
+var player = {
+    player1:{
+        piece: 'X',
+        name: '',
+        wins: 0
+
+    },
+    player2:{
+        piece: 'O',
+        name: '',
+        wins:0
+    }  
 }
-var player2= {
-    piece: 'O',
-    name: '',
-    wins:0
-}
+// Object.values(player).map(el=>{
+//     Object.values(el).map(i =>{
+//        if( i==='X') {
+//            console.log(el.wins)
+//        }
+//     })
+// })
 
 function my() {
     var name = document.getElementById('name').value;
-    if(player1.name !== '' && player2.name!==''){
+    if(player.player1.name !== '' && player.player2.name!==''){
         return;
     } else{
-        player1.name==='' ? player1.name=name : player2.name=name;
+        player.player1.name==='' ? player.player1.name=name : player.player2.name=name;
     }
-    if(player2.name==='') {
+    if(player.player2.name==='') {
         document.getElementById('player1').innerHTML = name;
     } else{
         document.getElementById('player2').innerHTML = name;
     }
 }
-document.getElementById('piece1').innerHTML = player1.piece;
+document.getElementById('piece1').innerHTML = player.player1.piece;
 
-document.getElementById('piece2').innerHTML = player2.piece;
+document.getElementById('piece2').innerHTML = player.player2.piece;
 
 
-var currentPlayer = player1.piece;
+var currentPlayer = player.player1.piece;
 
 function place(box) {
     if(box.innerText != '' || won) return;
     box.innerText = currentPlayer;
-    if(currentPlayer === player2.piece){
-        currentPlayer = player1.piece
+    if(currentPlayer === player.player2.piece){
+        currentPlayer = player.player1.piece
         
     }
     else{
-        currentPlayer = player2.piece
+        currentPlayer = player.player2.piece
     }
  checkBoard();
 }
@@ -62,8 +73,21 @@ function checkBoard(){
 }
 function checkWinner(first, second, third){
     if(first !='' && first == second && first ==third){
-        alert(`winner ${first}`);
+        let winner = first
+
+        let winnerName = Object.values(player).map(el=>{
+            Object.values(el).map(i =>{
+               if( i===winner) {
+                document.getElementById('winner').innerHTML=`The winner is ${el.name}`
+                el.wins +=1
+                console.log(el.wins)
+                   
+               } else{
+                   return false;
+               }
+            })
+        })
         won = true;   
-        first.wins++
+        
     }
 }

@@ -8,14 +8,17 @@
 </head>
 <body>
 <div id='intro'>
-    Click to play the game</br>
+    <div>
+  Enter players names
+    </div> 
     <input type='text' id='name' placeholder ='Enter Name'>
     <button onclick = 'javascript: my()'> Enter</button>
-</div>
+
+
 <div id='playerA'>
-    <h1> Player 1 <p id='piece1'></p></h1>
+    <h3> Player 1</h3>
     <h2 id='player1'></h2>
-    <!-- <h3 id='piece1'></h3> -->
+    <h3 id='piece1'></h3>
     <!-- <h4 id='wins1'></h4> -->
 </div>
 
@@ -25,6 +28,8 @@
     <h3 id='piece2'></h3>
     <!-- <h4 id='wins2'></h4> -->
 </div>
+</div>
+<h1 id='winner'></h1>
    
 <div class= 'gameBoard'>
     <div class = 'row'> 
@@ -44,6 +49,7 @@
         <div id='1_2' onCLick='place(this)'></div>
         <div id='2_2' onCLick='place(this)'></div>
     </div>
+
     
 </div>
 </body>
