@@ -7,32 +7,42 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<div class='popup' onload>
+<nav>
+    <a href='rulesOfGame.html'>Rules Of Game</a>
+</nav>
+<!-------------- Modal Pop-UP------------>
+<div>
    
-            <button onClick = "document.getElementById('modal').style.display='block'">Enter Players Names</button>
-<div id='modal' style='display: none'>
-    <span onClick = "document.getElementById('modal').style.display='none'">&times;</span>
-        <input type='text' id='name' placeholder ='Enter Name'>
-        <button onclick = 'javascript: my()'> Enter</button>
+    <button class='popup' onClick = "document.getElementById('modal').style.display='block'">Enter Players Names</button>
+        <div id='modal' style='display: none'>
+           
+            <input class='popup' type='text' id='name' placeholder ='Enter Name'>
+            <button class='popup' onclick = 'javascript: my()'> Enter</button>
+            <button class='popup'onClick = "document.getElementById('modal').style.display='none'">exit</button>
+        </div>
 </div>
+
+<!-------------Players Cards ------------>
+<div id='players'>
+    <div id='playerA'>
+        <h1 id='piece1'></h1>
+        <h2 id='player1'></h2>
+        <h4 id='wins1'></h4>
+    </div>
+
+    <div id='playerB'>  
+        <h1 id='piece2'></h1>
+        <h2 id='player2'></h2>
+        <h4 id='wins2'></h4>
+    </div>
 </div>
 
 
-<div id='intro'>
-<div id='playerA'>
-    <h3 id='piece1'></h3>
-    <h2 id='player1'></h2>
-    <h4 id='wins1'></h4>
-</div>
-
-<div id='playerB'>
-    <h1 id='piece2'></h1>
-    <h2 id='player2'></h2>
-    <h4 id='wins2'></h4>
-</div>
-</div>
+<!---------- Winner Declaration or Tie-------- -->
 <h1 id='winner'></h1>
-   
+ 
+
+<!---------- Game Board-------- -->
 <div class= 'gameBoard'>
     <div class = 'row'> 
         <div class='square' id='0_0' onCLick='place(this)'></div>
@@ -51,9 +61,11 @@
         <div  id='1_2' onCLick='place(this)'></div>
         <div  id='2_2' onCLick='place(this)'></div>
     </div>
-
-    <button onclick = 'javascript:  restartBoard()'>New Game</button>
  
+</div>
+<!---------- Board Reset  New Game-------- -->
+<div id='newGame'>
+    <button  class='reset' onclick = 'javascript:  restartBoard()'>New Game</button>
 </div>
 
 </body>

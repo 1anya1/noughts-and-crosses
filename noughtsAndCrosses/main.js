@@ -1,9 +1,10 @@
 
 var won = false;
-
+var dog = document.createElement("img");
+dog.src = "images/dog.png";
 var player = {
     player1:{
-        piece: 'X',
+        piece: dog,
         name: '',
         wins: 0
 
@@ -23,13 +24,13 @@ function my() {
         player.player1.name==='' ? player.player1.name=name : player.player2.name=name;
     }
     if(player.player2.name==='') {
-        document.getElementById('player1').innerHTML = name;
+        document.getElementById('player1').innerHTML = name.toUpperCase();
     } else{
-        document.getElementById('player2').innerHTML = name;
+        document.getElementById('player2').innerHTML = name.toUpperCase();
     }
 }
-document.getElementById('piece1').innerHTML = `Player 1 : ${player.player1.piece}`;
-document.getElementById('piece2').innerHTML = `Player 2 : ${player.player2.piece}`;
+document.getElementById('piece1').innerHTML = `Player 1 : '${player.player1.piece}'`;
+document.getElementById('piece2').innerHTML = `Player 2 : '${player.player2.piece}'`;
 // document.getElementById('piece2').innerHTML = player.player2.piece;
 
 document.getElementById('wins2').innerHTML = `wins: ${player.player2.wins}`;
@@ -88,16 +89,18 @@ function restartBoard(){
 function checkWinner(first, second, third){
     if(first !='' && first == second && first == third){
         let winner = first
+        console.log(winner)
 
       Object.values(player).map(el=>{
             Object.values(el).map(i =>{
                if( i===winner) {
-                document.getElementById('winner').innerHTML=`The winner is ${el.name}`
+                document.getElementById('winner').innerHTML=`The winner is ${el.name.toUpperCase()}`
                 el.wins +=1
                 console.log(el.wins)
                 document.getElementById('wins2').innerHTML = `wins: ${player.player2.wins}`;
                 document.getElementById('wins1').innerHTML = `wins: ${player.player1.wins}`;
                 won = true;   
+            
                } 
             })
         })
