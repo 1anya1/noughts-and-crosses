@@ -5,12 +5,16 @@ body{
 #intro{
     padding: 40px;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+  
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center; 
+    justify-content: center;
 }
 .row{    
     display: grid;
-    grid-template-columns: 50px 50px 50px;
+    grid-template-columns: repeat(3, .5fr);
+    
     justify-items: center;
     align-items: center; 
     justify-content: center;
@@ -18,9 +22,13 @@ body{
 .row div{
     display:grid;
     border: 1px solid black;
-    height: 50px;
-    width: 50px; 
-    margin: 0 50px;
+    
+    height: 20vh;
+    width: 100%; 
+
     align-items: center; 
     justify-items: center;
+}
+.gameBoard{
+    max-width: 600px;
 }

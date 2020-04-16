@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<div class='popup' onload>
+   
+            <button onClick = "document.getElementById('modal').style.display='block'">Enter Players Names</button>
+<div id='modal' style='display: none'>
+    <span onClick = "document.getElementById('modal').style.display='none'">&times;</span>
+        <input type='text' id='name' placeholder ='Enter Name'>
+        <button onclick = 'javascript: my()'> Enter</button>
+</div>
+</div>
+
+
 <div id='intro'>
-    <div>
-  Enter players names
-    </div> 
-    <input type='text' id='name' placeholder ='Enter Name'>
-    <button onclick = 'javascript: my()'> Enter</button>
-
-
 <div id='playerA'>
-    <h3> Player 1</h3>
-    <h2 id='player1'></h2>
     <h3 id='piece1'></h3>
+    <h2 id='player1'></h2>
     <h4 id='wins1'></h4>
 </div>
 
 <div id='playerB'>
-    <h1>Player 2</h1>
+    <h1 id='piece2'></h1>
     <h2 id='player2'></h2>
-    <h3 id='piece2'></h3>
     <h4 id='wins2'></h4>
 </div>
 </div>
@@ -53,6 +55,7 @@
     <button onclick = 'javascript:  restartBoard()'>New Game</button>
  
 </div>
+
 </body>
 <script src='main.js'> </script>
 </html>
