@@ -2,8 +2,15 @@
 /* font-family: 'Amatic SC', cursive;
 font-family: 'Josefin Slab', serif; */
 body{
-    background-color: white;
+    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    background-image: linear-gradient(to right top, #845ec2, #a55dbd, #c15db5, #d95fab, #ec64a0, #f76e91, #fd7b84, #ff8a7a, #ffa26e, #ffbd66, #ffda65, #f9f871);
     margin: 100px 100px auto; 
+}
+nav{
+    display: grid;
+    grid-template-columns: 25% 25%;
+    align-items: center;
+    justify-self: center;
 }
 
 #players{
@@ -14,6 +21,8 @@ body{
     align-items: center; 
     justify-content: center;
     font-family: 'Josefin Slab', serif; 
+    color: white;
+    font-weight: 600;
 }
 #playerA, #playerB {
     text-align: center; 
@@ -29,7 +38,7 @@ body{
 }
 .row div{
     display:grid;
-    border: 1px solid black;
+    border: .1px rgb(203, 203, 203) solid;
     height: 20vh;
     width: 100%; 
     margin: 0 auto;
@@ -39,6 +48,7 @@ body{
 .gameBoard{
     max-width: 520px;
     margin: 50px auto;
+    background-color: white;
     
 }
 .reset {
@@ -48,7 +58,7 @@ body{
     align-items: center;
     justify-self: center;
     margin: 25px  auto;
-    border: 1px black solid;
+    border: .1px rgb(203, 203, 203) solid;
     border-radius: 15px;
     font-family: 'Amatic SC', cursive;
     font-size: 30px;
@@ -68,4 +78,13 @@ body{
     border-radius: 15px;
     font-family: 'Amatic SC', cursive;
     font-size: 30px;
+}
+.name{
+    font-family: 'Amatic SC', cursive;
+    font-size: 45px;
+}
+a{
+    text-align: center;
+    align-items: center;
+    justify-self: center;
 }

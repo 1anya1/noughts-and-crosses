@@ -1,10 +1,10 @@
 
 var won = false;
-var dog = document.createElement("img");
-dog.src = "images/dog.png";
+
 var player = {
     player1:{
-        piece: dog,
+        piece:'X',
+        
         name: '',
         wins: 0
 
@@ -30,25 +30,30 @@ function my() {
     }
 }
 document.getElementById('piece1').innerHTML = `Player 1 : '${player.player1.piece}'`;
+
 document.getElementById('piece2').innerHTML = `Player 2 : '${player.player2.piece}'`;
-// document.getElementById('piece2').innerHTML = player.player2.piece;
 
 document.getElementById('wins2').innerHTML = `wins: ${player.player2.wins}`;
 document.getElementById('wins1').innerHTML = `wins: ${player.player1.wins}`;
 
-var currentPlayer = player.player1.piece;
+var currentPlayer = player.player1.piece
 
 function place(box) {
     if(box.innerText != '' || won) return;
+    
     box.innerText = currentPlayer;
     if(currentPlayer === player.player2.piece){
+    
+      
         currentPlayer = player.player1.piece
+    
+        console.log(player.player1.piece)
         
         
     }
     else{
         currentPlayer = player.player2.piece
-        
+       
     }
  checkBoard();
 }
