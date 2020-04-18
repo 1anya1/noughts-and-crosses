@@ -4,13 +4,14 @@ font-family: 'Josefin Slab', serif; */
 body{
     /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
     background-image: linear-gradient(to right top, #845ec2, #a55dbd, #c15db5, #d95fab, #ec64a0, #f76e91, #fd7b84, #ff8a7a, #ffa26e, #ffbd66, #ffda65, #f9f871);
-    margin: 100px 100px auto; 
+    margin: 20px  50px auto; 
 }
 nav{
     display: grid;
     grid-template-columns: 25% 25%;
     align-items: center;
     justify-self: center;
+    
 }
 
 #players{
@@ -87,4 +88,31 @@ a{
     text-align: center;
     align-items: center;
     justify-self: center;
+    color:white;
+    font-family: 'Josefin Slab', serif; 
+    text-decoration: none;
+}
+a:hover {
+    color: pink;
+    font-size: 21px;
+}
+#modal{
+    background-color: rgba(255,255, 255, 0.3);
+    width: 50%;
+    padding: 25px;
+    display: grid; 
+    margin: 0 auto;
+}
+#exit{
+    border: none;
+}
+#winner{
+    color: white;
+}
+footer{
+    color: white;
+    font-family: 'Josefin Slab', serif; 
+    text-align: center;
+    font-size: 21px;
+    padding: 50px;
 }

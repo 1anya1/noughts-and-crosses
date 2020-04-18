@@ -18,9 +18,9 @@
     <button class='popup' onClick = "document.getElementById('modal').style.display='block'">Enter Players Names</button>
         <div id='modal' style='display: none'>
            
-            <input class='popup' type='text' id='name' placeholder ='Enter Name'>
+            <input class='popup' type='text' id='name' placeholder ='Enter Name' >
             <button class='popup' onclick = 'javascript: my()'> Enter</button>
-            <button class='popup'onClick = "document.getElementById('modal').style.display='none'">exit</button>
+            <button id='exit' class='popup'onClick = "document.getElementById('modal').style.display='none'">X</button>
         </div>
 </div>
 
@@ -29,13 +29,13 @@
     <div id='playerA'>
         <h1 id='piece1'></h1>
         <h2 id='player1'></h2>
-        <h4 id='wins1'></h4>
+        <h3 id='wins1'></h3>
     </div>
 
     <div id='playerB'>  
         <h1 id='piece2'></h1>
         <h2 id='player2'></h2>
-        <h4 id='wins2'></h4>
+        <h3 id='wins2'></h3>
     </div>
 </div>
 
@@ -47,21 +47,21 @@
 <!---------- Game Board-------- -->
 <div class= 'gameBoard'>
     <div class = 'row'> 
-        <div class='square' id='0_0' onCLick='place(this)'></div>
-        <div class='square' id='1_0' onCLick='place(this)'></div>
-        <div class='square' id='2_0' onCLick='place(this)'></div>
+        <div class='square' id='0_0' onCLick='place(this.id) '></div>
+        <div class='square' id='1_0' onCLick='place(this.id)'></div>
+        <div class='square' id='2_0' onCLick='place(this.id)'></div>
     </div>
 
     <div class = 'row'> 
-        <div class='square' id='0_1' onCLick='place(this)'> </div>
-        <div class='square' id='1_1' onCLick='place(this)'></div>
-        <div class='square' id='2_1' onCLick='place(this)'></div>
+        <div class='square' id='0_1' onCLick='place(this.id)'> </div>
+        <div class='square' id='1_1' onCLick='place(this.id)'></div>
+        <div class='square' id='2_1' onCLick='place(this.id)'></div>
     </div>
 
     <div class = 'row'> 
-        <div  id='0_2' onCLick='place(this)'></div>
-        <div  id='1_2' onCLick='place(this)'></div>
-        <div  id='2_2' onCLick='place(this)'></div>
+        <div  id='0_2' onCLick='place(this.id)'></div>
+        <div  id='1_2' onCLick='place(this.id)'></div>
+        <div  id='2_2' onCLick='place(this.id)'></div>
     </div>
  
 </div>
@@ -69,9 +69,10 @@
 <div id='newGame'>
     <button  class='reset' onclick = 'javascript:  restartBoard()'>New Game</button>
 </div>
-<div class= 'footer'> 
-Footer
-</div>
+<footer> 
+made with 💜 Anna Filatova
+2020
+</footer>
 </body>
 <script type="text/javascript" src="Colors.js"></script>
 <script src='main.js'> </script>

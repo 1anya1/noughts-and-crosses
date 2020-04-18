@@ -22,38 +22,41 @@ function my() {
         return;
     } else{
         player.player1.name==='' ? player.player1.name=name : player.player2.name=name;
+       
     }
     if(player.player2.name==='') {
         document.getElementById('player1').innerHTML = name.toUpperCase();
     } else{
         document.getElementById('player2').innerHTML = name.toUpperCase();
     }
+  
 }
 document.getElementById('piece1').innerHTML = `Player 1 : '${player.player1.piece}'`;
 
 document.getElementById('piece2').innerHTML = `Player 2 : '${player.player2.piece}'`;
 
-document.getElementById('wins2').innerHTML = `wins: ${player.player2.wins}`;
-document.getElementById('wins1').innerHTML = `wins: ${player.player1.wins}`;
+document.getElementById('wins2').innerHTML = `WINS: ${player.player2.wins}`;
+document.getElementById('wins1').innerHTML = `WINS: ${player.player1.wins}`;
 
 var currentPlayer = player.player1.piece
 
-function place(box) {
+
+
+function place(box_id) {
+    let box = document.getElementById(box_id)
     if(box.innerText != '' || won) return;
     
     box.innerText = currentPlayer;
     if(currentPlayer === player.player2.piece){
     
+      document.getElementById(box_id).style.color='#845ec2' 
       
         currentPlayer = player.player1.piece
-    
-        console.log(player.player1.piece)
-        
         
     }
     else{
         currentPlayer = player.player2.piece
-       
+        document.getElementById(box_id).style.color='#ff8a7a' 
     }
  checkBoard();
 }
@@ -92,18 +95,19 @@ function restartBoard(){
     
 }
 function checkWinner(first, second, third){
-    if(first !='' && first == second && first == third){
+    if(first!='' && first == second && first == third){
         let winner = first
-        console.log(winner)
+        console.log(document.getElementById(first))
+       
 
       Object.values(player).map(el=>{
             Object.values(el).map(i =>{
                if( i===winner) {
                 document.getElementById('winner').innerHTML=`The winner is ${el.name.toUpperCase()}`
                 el.wins +=1
-                console.log(el.wins)
-                document.getElementById('wins2').innerHTML = `wins: ${player.player2.wins}`;
-                document.getElementById('wins1').innerHTML = `wins: ${player.player1.wins}`;
+                // console.log(el.wins)
+                document.getElementById('wins2').innerHTML = `WINS: ${player.player2.wins}`;
+                document.getElementById('wins1').innerHTML = `WINS: ${player.player1.wins}`;
                 won = true;   
             
                } 
@@ -125,7 +129,7 @@ function checkWinner(first, second, third){
             document.getElementById('2_1').innerHTML!=='' &&
             document.getElementById('2_2').innerHTML!=='')
         
-        { document.getElementById('winner').innerHTML=`It's a tie`    
+        { document.getElementById('winner').innerHTML=`It's a Tie`    
         }
     }
     
