@@ -231,19 +231,19 @@ footer{
   }
 @media(max-width: 3000px){
     .row{
-        grid-template-columns: repeat(3, 200px);
+        grid-template-columns: repeat(3, 250px);
     }
     .info{
         font-size: 35px;
         padding: 50px 100px;
     }
     .row div{
-        height: 200px;
-        width: 200px; 
+        height: 250px;
+        width: 250px; 
         font-size: 180px;
     }
     .gameBoard{
-        width: 600px;
+        width: 750px;
     }
     .gamePlay{
         padding: 50px 100px;
@@ -253,16 +253,16 @@ footer{
 
 @media(max-width: 1000px){
     .row{
-        grid-template-columns: repeat(3, 180px);
+        grid-template-columns: repeat(3, 200px);
         
     }
     .row div{
-        height: 180px;
-        width: 180px; 
+        height: 200px;
+        width: 200px; 
         font-size: 130px;
     }
     .gameBoard{
-        width: 540px;
+        width: 600px;
     }
     .info{
         font-size: 50px;
