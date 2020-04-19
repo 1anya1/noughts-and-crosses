@@ -125,10 +125,13 @@ footer{
 
 }
 
-@media (max-width: 500px){
+@media only screen and (max-width: 500px){
   
     .row div{
         height: 10vh;
+    }
+    .info{
+        font-size: 30px;
     }
 
 }
