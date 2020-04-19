@@ -1,13 +1,12 @@
 
 var won = false;
+var tie = 0;
 
 var player = {
     player1:{
         piece:'X',
-        
         name: '',
         wins: 0
-
     },
     player2:{
         piece: 'O',
@@ -15,6 +14,7 @@ var player = {
         wins:0
     }  
 }
+
 
 function my() {
     var name = document.getElementById('name').value;
@@ -60,6 +60,8 @@ function place(box_id) {
     }
  checkBoard();
 }
+
+
 function checkBoard(){
     for(var i=0; i<=2; i++){
         checkWinner(document.getElementById(i + '_0').innerText,
@@ -73,10 +75,13 @@ function checkBoard(){
     checkWinner(document.getElementById('0_0').innerText,
         document.getElementById('1_1').innerText,
         document.getElementById('2_2').innerText);
+
     checkWinner(document.getElementById('0_2').innerText,
         document.getElementById('1_1').innerText,
         document.getElementById('2_0').innerText);
 }
+
+
 function restartBoard(){
         document.getElementById('0_0').innerHTML='',
         document.getElementById('0_1').innerHTML='',
@@ -89,23 +94,28 @@ function restartBoard(){
         document.getElementById('2_0').innerHTML='',
         document.getElementById('2_1').innerHTML='',
         document.getElementById('2_2').innerHTML='';
-    won= false;
-    document.getElementById('winner').innerHTML=''
-        
+
+        won= false;
+
+        document.getElementById('winner').innerHTML=''
     
+        currentPlayer = player.player1.piece
+           
 }
+
+
 function checkWinner(first, second, third){
     if(first!='' && first == second && first == third){
-        let winner = first
-        console.log(document.getElementById(first))
        
+        let winner = first 
 
       Object.values(player).map(el=>{
+       
             Object.values(el).map(i =>{
                if( i===winner) {
                 document.getElementById('winner').innerHTML=`The winner is ${el.name.toUpperCase()}`
                 el.wins +=1
-                // console.log(el.wins)
+                console.log(el.wins)
                 document.getElementById('wins2').innerHTML = `WINS: ${player.player2.wins}`;
                 document.getElementById('wins1').innerHTML = `WINS: ${player.player1.wins}`;
                 won = true;   
@@ -117,7 +127,7 @@ function checkWinner(first, second, third){
        
         
     }  else {
-        if ( document.getElementById('0_0').innerHTML!=='' &&
+        if (document.getElementById('0_0').innerHTML!=='' &&
             document.getElementById('0_1').innerHTML!=='' &&
             document.getElementById('0_2').innerHTML!==''&&
 
@@ -127,11 +137,18 @@ function checkWinner(first, second, third){
 
             document.getElementById('2_0').innerHTML!=='' &&
             document.getElementById('2_1').innerHTML!=='' &&
-            document.getElementById('2_2').innerHTML!=='')
+            document.getElementById('2_2').innerHTML!=='' &&
+
+            won !==true
+            
+            )
         
-        { document.getElementById('winner').innerHTML=`It's a Tie`    
+        { 
+            document.getElementById('winner').innerHTML=`It's a Tie`    
+            
         }
+      
     }
-    
+   
 }
     
