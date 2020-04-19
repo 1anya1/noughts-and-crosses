@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Josefin+Slab&display=swap');
+/* font-family: 'Amatic SC', cursive;
+font-family: 'Josefin Slab', serif; */
+body{
+    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    background-image: linear-gradient(to right top, #845ec2, #a55dbd, #c15db5, #d95fab, #ec64a0, #f76e91, #fd7b84, #ff8a7a, #ffa26e, #ffbd66, #ffda65, #f9f871);
+    margin: 50px  50px auto; 
+}
+nav{
+    display: grid;
+    grid-template-columns: 25% 30%;
+    align-items: center;
+    justify-self: center;
+    
+}
+
+#players{
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    justify-items: center;
+    align-items: center; 
+    justify-content: center;
+    font-family: 'Josefin Slab', serif; 
+    color: white;
+    font-weight: 600;
+}
+#playerA, #playerB {
+    text-align: center; 
+
+}
+.row{    
+    display: grid;
+    grid-template-columns: repeat(3, .5fr);
+    align-items: center;
+    justify-self: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 9vh;
+}
+.row div{
+    display:grid;
+    border: .1px rgb(203, 203, 203) solid;
+    height: 10vh;
+    width: 100%; 
+    margin: 0 auto;
+    align-items: center; 
+    justify-items: center;
+}
+.gameBoard{
+    max-width: 520px;
+    margin: 50px auto;
+    background-color: white;
+    
+}
+.reset {
+    display: grid;
+    padding: 20px;
+    width: 30%;
+    align-items: center;
+    justify-self: center;
+    margin: 50px  auto;
+    border: .1px rgb(203, 203, 203) solid;
+    border-radius: 15px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+#winner{
+    text-align: center;
+    font-family: 'Josefin Slab', serif;
+}
+.popup {
+    display: grid;
+    padding: 20px;
+    width: 30%;
+    align-items: center;
+    justify-self: center;
+    margin: 100px auto;
+    border: 1px black solid;
+    border-radius: 15px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+.name{
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+}
+a{
+    text-align: center;
+    align-items: center;
+    justify-self: center;
+    color:white;
+    font-family: 'Josefin Slab', serif; 
+    text-decoration: none;
+    font-size: 21px;
+}
+a:hover {
+    color: pink;
+    font-size: 31px;
+}
+#modal{
+    background-color: rgba(255,255, 255, 0.3);
+    width: 50%;
+    padding: 25px;
+    display: grid; 
+    margin: 0 auto;
+}
+#exit{
+    border: none;
+    background-color: white;
+}
+#winner{
+    color: white;
+}
+footer{
+    color: white;
+    font-family: 'Josefin Slab', serif; 
+    text-align: center;
+    font-size: 21px;
+    padding: 50px;
+}
+.info{
+    color: white; 
+    font-family: 'Josefin Slab', serif;
+    padding: 50px 0 auto;
+
+}
