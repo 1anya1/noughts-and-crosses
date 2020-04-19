@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Noughts and Crosses</title>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+<nav>
+    <h2 class ='name'> <font color='pink'>Tic-Tac-Toe</font></h2>
+    <a href='rulesOfGame.html'>Game Rules</a>
+</nav>
+
+<div>
+        <h2 class='info'>
+                The object of Tic Tac Toe is to get three in a row. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled. 
+        </h2>
+    </div>
+<!-------------- Modal Pop-UP------------>
+<div>
+   
+    <button class='popup' onClick = "document.getElementById('modal').style.display='block'">Enter Players Names</button>
+        <div id='modal' style='display: none'>
+           
+            <input class='popup' type='text' id='name' placeholder ='Enter Name' >
+            <button class='popup' onclick = 'javascript: my()'> Enter</button>
+            <button id='exit' class='popup'onClick = "document.getElementById('modal').style.display='none'">X</button>
+        </div>
+</div>
+
+
+
+<!-------------Players Cards ------------>
+<div id='players'>
+    <div id='playerA'>
+        <h1 id='piece1'></h1>
+        <h2 id='player1'></h2>
+        <h3 id='wins1'></h3>
+    </div>
+
+    <div id='playerB'>  
+        <h1 id='piece2'></h1>
+        <h2 id='player2'></h2>
+        <h3 id='wins2'></h3>
+    </div>
+</div>
+
+
+<!---------- Winner Declaration or Tie-------- -->
+<h1 id='winner'></h1>
+ 
+
+<!---------- Game Board-------- -->
+<div class= 'gameBoard'>
+    <div class = 'row'> 
+        <div class='square' id='0_0' onCLick='place(this.id) '></div>
+        <div class='square' id='1_0' onCLick='place(this.id)'></div>
+        <div class='square' id='2_0' onCLick='place(this.id)'></div>
+    </div>
+
+    <div class = 'row'> 
+        <div class='square' id='0_1' onCLick='place(this.id)'> </div>
+        <div class='square' id='1_1' onCLick='place(this.id)'></div>
+        <div class='square' id='2_1' onCLick='place(this.id)'></div>
+    </div>
+
+    <div class = 'row'> 
+        <div  id='0_2' onCLick='place(this.id)'></div>
+        <div  id='1_2' onCLick='place(this.id)'></div>
+        <div  id='2_2' onCLick='place(this.id)'></div>
+    </div>
+ 
+</div>
+<!---------- Board Reset  New Game-------- -->
+<div id='newGame'>
+    <button  class='reset' onclick = 'javascript:  restartBoard()'>New Game</button>
+</div>
+<footer> 
+made with 💜 Anna Filatova
+2020
+</footer>
+</body>
+<script type="text/javascript" src="Colors.js"></script>
+<script src='main.js'> </script>
+
+</html>
