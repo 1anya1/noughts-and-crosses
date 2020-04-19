@@ -6,13 +6,7 @@ body{
     background-image: linear-gradient(to right top, #845ec2, #a55dbd, #c15db5, #d95fab, #ec64a0, #f76e91, #fd7b84, #ff8a7a, #ffa26e, #ffbd66, #ffda65, #f9f871);
     margin: 50px  50px auto; 
 }
-nav{
-    display: grid;
-    grid-template-columns: 25% 30%;
-    align-items: center;
-    justify-self: center;
-    
-}
+
 
 #players{
     margin: 50px auto;
@@ -27,6 +21,7 @@ nav{
 }
 #playerA, #playerB {
     text-align: center; 
+    font-size: 25px;
 
 }
 .row{    
@@ -84,7 +79,9 @@ nav{
 }
 .name{
     font-family: 'Amatic SC', cursive;
-    font-size: 40px;
+    font-size: 100px;
+    margin: 50px;
+    text-align: center;
 }
 a{
     text-align: center;
@@ -129,9 +126,109 @@ footer{
     padding: 50px 0 auto;
 
 }
+#rules{
+        width: 30%;
+        margin: 15px auto;
+        font-size: 30px;
+        color: white;
+        background: none;
+}
+#movingButton {
+    animation: 
+      nudge 5s linear  alternate;
+  }
+  #seperator{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    color: white;
+  }
+
+  #awesome {
+
+    animation:colorchange 20s infinite alternate;
+    
+    
+    
+  }
+
+  @keyframes colorchange {
+    0% {
+      
+      color: #845ec2;
+    }
+    
+    10% {
+      
+      color: #ffda65;
+    }
+    
+    20% {
+      
+      color: #f76e91;
+    }
+    
+    30% {
+      
+      color: #2980b9;
+    }
+    
+    40% {
+      
+      color: #a55dbd;
+    }
+    
+    50% {
+      
+      color: #f1c40f;
+    }
+    
+    60% {
+      
+      color: aquamarine;
+    }
+    
+    70% {
+      
+      color: #fd7b84;
+    }
+    80% {
+   
+      color: #f1c40f;
+    }
+    
+    90% {
+   
+      color: aliceblue;
+    }
+    
+    100% {
+      
+      color: #a55dbd;
+    }
+  }
+
+  @keyframes nudge {
+  
+    0% {
+      transform: rotate(-7deg);
+    }
+    
+    33% {
+      transform: rotate(7deg);
+    }
+    
+    66% {
+      transform: rotate(-7deg);
+    }
+  }
 @media(max-width: 3000px){
     .row{
         grid-template-columns: repeat(3, 200px);
+    }
+    .info{
+        font-size: 35px;
+        padding: 50px 100px;
     }
     .row div{
         height: 200px;
@@ -141,6 +238,7 @@ footer{
     .gameBoard{
         width: 600px;
     }
+
 }
 
 @media(max-width: 1000px){

@@ -8,20 +8,25 @@
     
 </head>
 <body>
-<nav>
-    <h2 class ='name'> <font color='pink'>Tic-Tac-Toe</font></h2>
-    <a href='rulesOfGame.html'>Game Rules</a>
-</nav>
+
+<h2 class ='name' id='awesome'> Tic-Tac-Toe</h2>
+<button id='rules' class='popup'> <a  href='rulesOfGame.html'> Game Rules </a></button>
 
 <div>
         <h2 class='info'>
-                The object of Tic Tac Toe is to get three in a row. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled. 
+                The object of Tic Tac Toe is to get three in a row. The first player is known as X and the second is O.
+        
+                 Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled. </br>
+               
+               
         </h2>
+       
     </div>
 <!-------------- Modal Pop-UP------------>
+
 <div>
    
-    <button class='popup' onClick = "document.getElementById('modal').style.display='block'">Enter Players Names</button>
+    <button class='popup' id='movingButton'  onClick = "document.getElementById('modal').style.display='block'">Enter Players Names</button>
         <div id='modal' style='display: none'>
            
             <input class='popup' type='text' id='name' placeholder ='Enter Name' >
