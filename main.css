@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Josefin+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 
 body{
@@ -270,7 +271,16 @@ footer{
     .gamePlay{
         padding:50px;
     }
-    
+    .popup{
+        font-family: 'Amatic SC', cursive;
+        font-weight: 700;
+        border: 3px solid white;
+
+    }
+    .name{
+        font-size: 150px;
+        margin: 150px auto;
+    }
 }
 @media(max-width: 500px){
     .row{
