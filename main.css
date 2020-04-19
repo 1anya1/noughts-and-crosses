@@ -146,13 +146,13 @@ footer{
 
   #awesome {
 
-    animation:colorchange 20s infinite alternate;
+    -webkit-animation:colorchange 20s infinite alternate;
     
     
     
   }
 
-  @keyframes colorchange {
+  @-webkit-keyframes colorchange {
     0% {
       
       color: #845ec2;
