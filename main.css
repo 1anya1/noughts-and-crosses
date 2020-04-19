@@ -282,6 +282,8 @@ footer{
         font-size: 150px;
         margin: 150px auto;
     }
+    #playerA, #playerB {
+        font-size: 40px;
 }
 @media(max-width: 500px){
     .row{
