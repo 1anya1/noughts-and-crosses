@@ -289,5 +289,8 @@ footer{
         font-size: 60px;
         font-weight: 700;
     }
+    #winner{
+        font-size: 85px;
+    }
 }
 
