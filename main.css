@@ -71,14 +71,16 @@ nav{
 .popup {
     display: grid;
     padding: 20px;
-    width: 30%;
+    width: 50%;
     align-items: center;
     justify-self: center;
     margin: 100px auto;
-    border: 1px black solid;
+    border: 1px white solid;
     border-radius: 15px;
     font-family: 'Amatic SC', cursive;
-    font-size: 30px;
+    font-size: 50px;
+    color: white;
+    background: none;
 }
 .name{
     font-family: 'Amatic SC', cursive;
@@ -105,8 +107,11 @@ a:hover {
     margin: 0 auto;
 }
 #exit{
-    border: none;
-    background-color: white;
+    border: 1px solid  #c15db5;
+    background-color: #d95fab;
+    font-size: 51px;
+    padding: 10px;
+  
 }
 #winner{
     color: white;
