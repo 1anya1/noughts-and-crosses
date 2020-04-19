@@ -46,6 +46,7 @@ var currentPlayer = player.player1.piece
 
 function place(box_id) {
     let box = document.getElementById(box_id)
+    console.log(box_id)
     if(box.innerText != '' || won) return;
     
     box.innerText = currentPlayer;
@@ -66,21 +67,21 @@ function place(box_id) {
 
 function checkBoard(){
     for(var i=0; i<=2; i++){
-        checkWinner(document.getElementById(i + '_0').innerText,
-            document.getElementById(i+'_1').innerText,
-            document.getElementById(i+'_2').innerText);
-        checkWinner(document.getElementById('0_'+i).innerText,
-            document.getElementById('1_'+i).innerText,
-            document.getElementById('2_'+i).innerText);
+        checkWinner(document.getElementById(i + '_0'),
+            document.getElementById(i+'_1'),
+            document.getElementById(i+'_2'));
+        checkWinner(document.getElementById('0_'+i),
+            document.getElementById('1_'+i),
+            document.getElementById('2_'+i));
         
     }
-    checkWinner(document.getElementById('0_0').innerText,
-        document.getElementById('1_1').innerText,
-        document.getElementById('2_2').innerText);
+    checkWinner(document.getElementById('0_0'),
+        document.getElementById('1_1'),
+        document.getElementById('2_2'));
 
-    checkWinner(document.getElementById('0_2').innerText,
-        document.getElementById('1_1').innerText,
-        document.getElementById('2_0').innerText);
+    checkWinner(document.getElementById('0_2'),
+        document.getElementById('1_1'),
+        document.getElementById('2_0'));
 }
 
 
@@ -100,6 +101,7 @@ function restartBoard(){
         won= false;
 
         document.getElementById('winner').innerHTML=''
+        document.getElementsByClassName('square').style.backgroundColor='white';
     
         currentPlayer = player.player1.piece
            
@@ -107,9 +109,20 @@ function restartBoard(){
 
 
 function checkWinner(first, second, third){
-    if(first!='' && first == second && first == third){
+    if(first.innerText!='' && first.innerText == second.innerText && first.innerText == third.innerText){
+       let firstChange = first.id;
+       document.getElementById(firstChange).style.backgroundColor= 'purple' 
+       let secondChange = second.id
+       document.getElementById(secondChange).style.backgroundColor= 'purple' 
+       let thirdChange = third.id
+       document.getElementById(thirdChange).style.backgroundColor= 'purple' 
+        let winner = first.innerText 
+        console.log()
+        console.log(second.id)
+        console.log(third.id)
+     
        
-        let winner = first 
+            
 
       Object.values(player).map(el=>{
        
