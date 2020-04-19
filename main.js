@@ -31,6 +31,8 @@ function my() {
     }
   
 }
+
+
 document.getElementById('piece1').innerHTML = `Player 1 : '${player.player1.piece}'`;
 
 document.getElementById('piece2').innerHTML = `Player 2 : '${player.player2.piece}'`;
@@ -113,7 +115,7 @@ function checkWinner(first, second, third){
        
             Object.values(el).map(i =>{
                if( i===winner) {
-                document.getElementById('winner').innerHTML=`The winner is ${el.name.toUpperCase()}`
+                document.getElementById('winner').innerHTML=`The winner is:  ${el.piece} ${el.name.toUpperCase()}`
                 el.wins +=1
                 console.log(el.wins)
                 document.getElementById('wins2').innerHTML = `WINS: ${player.player2.wins}`;
