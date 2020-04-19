@@ -67,7 +67,7 @@ body{
 .popup {
     display: grid;
     padding: 20px;
-    width: 50%;
+    width: 40%;
     align-items: center;
     justify-self: center;
     margin: 100px auto;
@@ -128,7 +128,7 @@ footer{
 
 }
 #rules{
-        width: 300px;
+   
         margin: 25px auto;
         
         font-size: 40px;
@@ -157,56 +157,60 @@ footer{
   @-webkit-keyframes colorchange {
     0% {
       
-      color: #845ec2;
+     
+      color: #ff8a7a;
     }
     
     10% {
       
-      color: #ffda65;
+        color: #845ec2;
+     
     }
     
     20% {
       
-      color: #f76e91;
+       
+        color: #f76e91;
     }
     
     30% {
       
-      color: #2980b9;
+      color: #d95fab;
     }
     
     40% {
       
-      color: #a55dbd;
+      color: #ec64a0;
     }
     
     50% {
       
-      color: #f1c40f;
+        color: #845ec2;
     }
     
     60% {
       
-      color: aquamarine;
+      color: #fd7b84;
     }
     
     70% {
       
-      color: #fd7b84;
+
+      color: #c15db5;
     }
     80% {
    
-      color: #f1c40f;
+      color: #ffa26e;
     }
     
     90% {
    
-      color: aliceblue;
+      color: #a55dbd;
     }
     
     100% {
       
-      color: #a55dbd;
+      color: #ffda65;
     }
   }
 
@@ -240,6 +244,9 @@ footer{
     .gameBoard{
         width: 600px;
     }
+    .gamePlay{
+        padding: 50px 100px;
+    }
 
 }
 
@@ -260,6 +267,10 @@ footer{
         font-size: 40px;
         padding: 50px 0px;
     }
+    .gamePlay{
+        padding:50px;
+    }
+    
 }
 @media(max-width: 500px){
     .row{
