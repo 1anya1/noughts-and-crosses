@@ -14,8 +14,6 @@ var player = {
         wins:0
     }  
 }
-
-
 function my() {
     var name = document.getElementById('name').value;
     if(player.player1.name !== '' && player.player2.name!==''){
@@ -41,7 +39,6 @@ document.getElementById('wins2').innerHTML = `WINS: ${player.player2.wins}`;
 document.getElementById('wins1').innerHTML = `WINS: ${player.player1.wins}`;
 
 var currentPlayer = player.player1.piece
-
 
 
 function place(box_id) {
