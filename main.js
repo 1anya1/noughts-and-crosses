@@ -82,44 +82,18 @@ function checkBoard(){
 }
 
 
-function restartBoard(){
-        // document.getElementById('0_0').innerHTML='',
-        // document.getElementById('0_0').style.backgroundColor = 'white',
-        // document.getElementById('0_1').innerHTML='',
-        // document.getElementById('0_1').style.backgroundColor = 'white',
-        // document.getElementById('0_2').innerHTML='',
-        // document.getElementById('0_2').style.backgroundColor = 'white',
-
-        // document.getElementById('1_0').innerHTML='',
-        // document.getElementById('1_0').style.backgroundColor = 'white',
-        // document.getElementById('1_1').innerHTML='',
-        // document.getElementById('1_1').style.backgroundColor = 'white',
-        // document.getElementById('1_2').innerHTML='',
-        // document.getElementById('1_2').style.backgroundColor = 'white',
-
-        // document.getElementById('2_0').innerHTML='',
-        // document.getElementById('2_0').style.backgroundColor = 'white',
-        // document.getElementById('2_1').innerHTML='',
-        // document.getElementById('2_1').style.backgroundColor = 'white',
-        // document.getElementById('2_2').innerHTML='';
-        // document.getElementById('2_2').style.backgroundColor = 'white',
-
+function restartBoard(){  
      let square = document.querySelectorAll('div.square')
-
      let arr = [...square];
 
-     for(let i=0; i<arr.length; i++){
+    for(let i=0; i<arr.length; i++){
          if(arr[i].innerText !== ''){
             arr[i].innerText = ''
             arr[i].style.backgroundColor='white';
-         }
-     }
-
+        }
+    }
         won= false;
-
         document.getElementById('winner').innerText=''
-        
-    
         currentPlayer = player.player1.piece
            
 }
@@ -127,30 +101,15 @@ function restartBoard(){
 
 function checkWinner(first, second, third){
     if(first.innerText!='' && first.innerText == second.innerText && first.innerText == third.innerText){
-    //    let firstChange = first.id;
-    //    document.getElementById(firstChange).style.backgroundColor= ' #905ec0'
-    //    document.getElementById(firstChange).style.color='white'
-    //    let secondChange = second.id
-    //    document.getElementById(secondChange).style.backgroundColor= ' #905ec0' 
-    //    document.getElementById(secondChange).style.color='white'
-    //    let thirdChange = third.id
-    //    document.getElementById(thirdChange).style.backgroundColor= ' #905ec0' 
-    //    document.getElementById(thirdChange).style.color='white'
-    //     let winner = first.innerText 
-    //     console.log()
-    //     console.log(second.id)
-    //     console.log(third.id)
-     
        first.style.backgroundColor=' #905ec0'
        first.style.color ='white'
        second.style.backgroundColor=' #905ec0'
        second.style.color ='white'
        third.style.backgroundColor=' #905ec0'
        third.style.color ='white'
-            
 
+    const winner = first.innerText;
       Object.values(player).map(el=>{
-       
             Object.values(el).map(i =>{
                if( i===winner) {
                 document.getElementById('winner').innerHTML=`The winner is:  ${el.piece} ${el.name.toUpperCase()}`
@@ -167,35 +126,14 @@ function checkWinner(first, second, third){
        
         
     }  else {
-        // if (document.getElementById('0_0').innerHTML!=='' &&
-        //     document.getElementById('0_1').innerHTML!=='' &&
-        //     document.getElementById('0_2').innerHTML!==''&&
-
-        //     document.getElementById('1_0').innerHTML!=='' &&
-        //     document.getElementById('1_1').innerHTML!=='' &&
-        //     document.getElementById('1_2').innerHTML!=='' &&
-
-        //     document.getElementById('2_0').innerHTML!=='' &&
-        //     document.getElementById('2_1').innerHTML!=='' &&
-        //     document.getElementById('2_2').innerHTML!=='' &&
-
-        //     won !==true
-            
-        //     )
         let squares = document.querySelectorAll('div.square');
         let arr = [...squares];
 
-        if( (arr.every(el => el.innerText !== '')) === true ){
-            won !== true
+        if( ((arr.every(el => el.innerText !== '')) === true) && won!==true ){
+         
             document.getElementById('winner').innerHTML=`It's a Tie`    
 
         }
-
-        
-        // { 
-            // document.getElementById('winner').innerHTML=`It's a Tie`    
-            
-        // }
       
     }
    
