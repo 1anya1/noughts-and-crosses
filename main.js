@@ -121,9 +121,7 @@ function checkWinner(first, second, third){
             
                } 
             })
-        })
-        
-       
+        })  
         
     }  else {
         let squares = document.querySelectorAll('div.square');
